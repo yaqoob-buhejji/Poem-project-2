@@ -6,6 +6,7 @@ const morgan = require("morgan")
 const methodOverride = require("method-override")
 const conntectToDB = require('./config/db')
 const authRoutes = require("./routes/auth.routes")
+const poemRoutes = require("./routes/poem.routes")
 const session = require("express-session")
 const passUserToView = require('./middleware/passUserToView')
 const isSignedIn = require("./middleware/isSignedIn")
@@ -46,6 +47,8 @@ conntectToDB()
 
 
 app.use("/auth",authRoutes)
+app.use("/poem",poemRoutes)
+
 app.use(isSignedIn) //all your protected routes go below this middleware
 // Routes go here
 

@@ -74,4 +74,27 @@ router.delete("/:id", async (req,res)=>{
     }
 })
 
+router.get("/:id/update", async(req,res)=>{
+    try{
+        const currentUser = await User.findById(req.session.user._id)
+        const poems = currentUser.poems.id(req.params.id)
+        res.render("poems/poem-edit.ejs", {poems})
+    } catch(error){
+        console.log(error)
+    }
+})
+
+router.put("/:id", async(req,res)=>{
+    try{
+        const currentUser = await User.findById(req.session.user._id)
+        const poems = currentUser.poems.id(req.params.id)
+        poems.set(req.body)
+        await currentUser.save();
+        res.redirect('/poem')
+    } catch(error){
+        console.log(error)
+    }
+})
+
+
 module.exports = router

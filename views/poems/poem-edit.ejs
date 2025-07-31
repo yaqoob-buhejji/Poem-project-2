@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <%- include('../partials/navbar') %>
+    <h1>Update Poem</h1>
+<form action="/poem/<%= poems._id %>?_method=PUT" method="post">
+
+    <label for = "authorname">Write authorname</label>
+    <input type="text" name="authorname" id="authorname" value="<%= poems.authorname %>">
+
+    <label for = "text">Write Your peom</label>
+    <textarea type="text" name="text" id="text"><%= poems.text %></textarea>
+
+    <label for = "reference"> reference (where did you git it)</label>
+    <input type="text" name="reference" id="reference" value="<%= poems.reference %>">
+
+     <button type="submit">Edit Poem</button>
+     </form>
+
+</body>
+</html>

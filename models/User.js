@@ -1,5 +1,21 @@
 const mongoose = require("mongoose")
 
+const poemSchema = new mongoose.Schema({
+
+    authorname: {
+        type:String,
+        required:[true,"Write the author name"],
+    },
+    text:{
+        type:String,
+        required:[true,"Write the poem "],
+
+    },
+    reference: {
+       type: String,
+    }
+}) 
+
 const userSchema = new mongoose.Schema({
     username:{
         type:String,
@@ -9,7 +25,8 @@ const userSchema = new mongoose.Schema({
     password:{
         type:String,
         required:[true, "password is required"]
-    }
+    },
+    poems: [poemSchema],
 
 })
 

@@ -6,6 +6,11 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>I am working</h1>
+     <h1>All Poems</h1>
+
+    <% allPoems.forEach((onePoem)=>{ %>
+        <p>Name: <%= onePoem.authorname %></p>
+        <a href="/poem/<%=onePoem._id%>">View The poems</a>
+    <% }) %>
 </body>
 </html>

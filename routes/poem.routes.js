@@ -1,15 +1,11 @@
 const mongoose = require("mongoose")
 const router = require("express").Router()
-const Poem = require("../models/Poem")
+const User = require("../models/User")
 
 
 // Renders the homepage
 router.get("/", async(req,res)=>{
     res.render("poems/homepage.ejs")
-})
-router.get("/all", async(req,res)=>{
-    const allPoems = await Poem.find()
-    res.render("poems/poems.ejs", {allPoems:allPoems})
 })
 
 
@@ -28,11 +24,12 @@ router.get("/new", async(req,res)=>{
 
 // Creates the poem
 router.post("/new",async(req,res)=>{
-    console.log(req.body)
-    
     try{
-    await Poem.create(req.body)
-    res.render("poems/poems.ejs")
+    console.log(req.session.user)
+    const currentUser = await User.findById(req.session.user._id)
+    currentUser.poems.push(req.body)
+    await currentUser.save();
+    res.redirect('/poem')
 
     }catch(error){
         console.log(error)
@@ -45,5 +42,36 @@ router.post("/new",async(req,res)=>{
 //3. Send the list of poems as an object to the EJS
 //4. res.render() the EJS page from the correct folder
 
-module.exports = router
+router.get("/all", async(req,res)=>{
+    try{
+        const currentUser = await User.findById(req.session.user._id)
+        res.render("poems/allpoems.ejs", {allPoems: currentUser.poems})
+    } catch(error){
+        console.log(error)
+    }
+})
 
+router.get("/:id", async(req,res)=>{
+    try{
+        const currentUser = await User.findById(req.session.user._id)
+        const poems = currentUser.poems.id(req.params.id)
+        res.render("poems/poems-details.ejs", {poems})
+    } catch(error){
+        console.log(error)
+    }
+})
+
+router.delete("/:id", async (req,res)=>{
+    console.log(req.params)
+    try{
+        const currentUser = await User.findById(req.session.user._id)
+        currentUser.poems.id(req.params.id).deleteOne();
+        await currentUser.save();
+        res.redirect("/poem/all")
+    }
+    catch(error){
+        console.log(error)
+    }
+})
+
+module.exports = router

@@ -2,19 +2,18 @@ const mongoose = require("mongoose")
 
 const poemSchema = new mongoose.Schema({
 
-    name: String,
     authorname: {
         type:String,
         required:[true,"Write the author name"],
     },
-    type: String,
     text:{
         type:String,
         required:[true,"Write the poem "],
 
     },
-    reference:String,
-    
+    reference: {
+       type: String,
+    }
 }) 
 
 const Poem = mongoose.model("Poem", poemSchema)

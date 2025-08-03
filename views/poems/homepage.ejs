@@ -5,14 +5,17 @@
     <meta name="viewport" content="width=
     , initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="homepage.css">
+
 </head>
 <body>
     <%- include('../partials/navbar') %>
-    <h1>New Poem</h1>
-    <a href="/poem/new">New poem</a>
-    <h1>Lists of poems</h1>
-    <a href="/poem/all">Lists of poems</a>
-    
+    <h1>Welcome to poetry</h1>
+
+     <% if (user){ %>
+    <a href="/poem/new">Create poem</a>
+
+    <%} %>
     
 </body>
 </html>

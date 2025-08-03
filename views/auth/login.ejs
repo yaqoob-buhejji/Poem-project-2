@@ -4,13 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/login.css" />
     <title>Document</title>
 </head>
 
 <body>
     <%- include('../partials/navbar') %>
         <h1>Log in</h1>
-        <form action="/auth/login" method="post">
+        <img src="https://www.shutterstock.com/image-vector/vector-flat-illustration-grayscale-avatar-600nw-2264922221.jpg" alt="login image" />
+            <form action="/auth/login" method="post">
             <label for="username">username:</label>
             <input type="text" name="username" id="username">
 
@@ -18,14 +20,13 @@
             <input type="password" name="password" id="password">
 
             <button>Login</button>
-        </form>
+            </form>
 
         <% if (error) { %>
             <p style="color:red" class="error">
                 <%= error %>
             </p>
             <% } %>
-
 </body>
 
 </html>

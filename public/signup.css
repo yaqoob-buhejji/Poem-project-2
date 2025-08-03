@@ -2,6 +2,7 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color:#9fc7e0c6 ;
 }
 
 input {
@@ -14,7 +15,7 @@ input {
 }
 
 button {
-  background-color: #4f440bc6;
+  background-color: #1187b2;
   color: white;
   padding: 14px 20px;
   margin: 8px 0;

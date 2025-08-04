@@ -90,7 +90,7 @@ router.put("/:id", async(req,res)=>{
         const poems = currentUser.poems.id(req.params.id)
         poems.set(req.body)
         await currentUser.save();
-        res.redirect('/poem')
+        res.redirect('/poem/all')
     } catch(error){
         console.log(error)
     }

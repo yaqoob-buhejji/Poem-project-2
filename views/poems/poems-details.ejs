@@ -4,9 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="/poem-details.css">
 </head>
 <body>
+   
      <%- include('../partials/navbar') %>
+      <div class="written-by">
     <h1>Written by : <%= poems.authorname %></h1>
     <p>Content : <%= poems.text %></p>
     <p>Reference : <%= poems.reference %></p>
@@ -14,7 +17,7 @@
     <a href="/poem/<%= poems._id %>/Update">Update Poem</a>
     <form action="/poem/<%= poems._id%>?_method=DELETE" method="post">
     <button type="submit">Delete Poem</button>
-
+</div>
    </form>
 </body>
 </html>

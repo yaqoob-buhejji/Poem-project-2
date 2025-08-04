@@ -8,12 +8,16 @@
 </head>
 <body>
      <%- include('../partials/navbar') %>
-     <h1>All Poems</h1>
 
-    <% allPoems.forEach((onePoem)=>{ %>
+     <div class="allpoems">
+        <h1>All Poems</h1>
+        <div class="container">
+        <% allPoems.forEach((onePoem)=>{ %>
         <p>Name: <%= onePoem.authorname %></p>
         <a href="/poem/<%=onePoem._id%>">View The poems</a>
-    <% }) %>
+        <% }) %>
+        </div>
+     </div>
     
     
 </body>

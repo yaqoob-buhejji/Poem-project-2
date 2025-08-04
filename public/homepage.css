@@ -3,7 +3,7 @@ body {
 
 }
 
-.text{
+.text {
     color: black;
     background-color: beige;
     text-align: center;
@@ -11,4 +11,39 @@ body {
   width: 50%;
   border: 3px solid yellow;
   padding: 10px;
+  margin-top: 40px;
+}
+
+.craete-button {
+    display: flex;
+    justify-content: center;
+    color: black;
+    background-color: beige;
+    text-align: center;
+    margin: auto;
+    width: 50%;
+    border: 3px solid yellow;
+    padding: 10px;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.nav{
+    background-color: beige;
+    padding: 8px;
+    font-weight: bold;
+    overflow: hidden;
+    border: 3px solid yellow;
+}
+
+.nav a {
+    text-decoration: none;
+    padding: 10px;
+    font-size: 17px;
+    color: black;
+}
+
+.nav a:hover {
+    color: red;
 }

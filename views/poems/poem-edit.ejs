@@ -4,11 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="/new-poem.css">
 </head>
 <body>
     <%- include('../partials/navbar') %>
-    <h1>Update Poem</h1>
-<form action="/poem/<%= poems._id %>?_method=PUT" method="post">
+    <div class="new-poem">
+        <h1>Update Poem</h1>
+        <form action="/poem/<%= poems._id %>?_method=PUT" method="post">
 
     <label for = "authorname">Write authorname</label>
     <input type="text" name="authorname" id="authorname" value="<%= poems.authorname %>">
@@ -21,6 +23,8 @@
 
      <button type="submit">Edit Poem</button>
      </form>
+    </div>
+
 
 </body>
 </html>

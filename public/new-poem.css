@@ -1,6 +1,75 @@
 body{
     background-image: url("https://i.pinimg.com/736x/38/fc/ee/38fcee5bf2d192f8fcc1fc0eb4b593a2.jpg");
-    
     color: white;
 }
+
+h1 {
+    color: black;
+    border: 3px solid black;
+    width: 50%;
+    padding: 20px;
+    background-color: rgb(200, 194, 194);
+    text-align: center;
+}
+
+.new-poem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    color: black;
+    border: 3px solid black;
+    width: 50%;
+    padding: 20px;
+    background-color: rgb(200, 194, 194);
+}
+
+input {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: white;
+  color: black;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: 3px solid black;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+.nav{
+    background-color: white;
+    padding: 8px;
+    font-weight: bold;
+    overflow: hidden;
+    border: 3px solid black;
+}
+
+.nav a {
+    text-decoration: none;
+    padding: 10px;
+    font-size: 17px;
+    color: black;
+}
+
+.nav a:hover {
+    color: red;
+}
+
+
 

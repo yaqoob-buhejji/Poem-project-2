@@ -13,8 +13,7 @@
     <h1>Written by : <%= poems.authorname %></h1>
     <p>Content : <%= poems.text %></p>
     <p>Reference : <%= poems.reference %></p>
-
-    <a href="/poem/<%= poems._id %>/Update">Update Poem</a>
+      <div class="update"><a href="/poem/<%= poems._id %>/Update">Update Poem</a></div>
     <form action="/poem/<%= poems._id%>?_method=DELETE" method="post">
     <button type="submit">Delete Poem</button>
 </div>

@@ -29,7 +29,7 @@ router.post("/new",async(req,res)=>{
     const currentUser = await User.findById(req.session.user._id)
     currentUser.poems.push(req.body)
     await currentUser.save();
-    res.redirect('/poem')
+    res.redirect('/poem/all')
 
     }catch(error){
         console.log(error)

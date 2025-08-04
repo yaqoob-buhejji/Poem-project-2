@@ -32,19 +32,28 @@ body{
     padding: 20px;
     display: flex;
     flex-direction: column;
-    
 }
 
-p{
-    font-size: large;
+.written-by p{
+    font-size: 20px;
 }
 
 button{
     font-size: large;
-    
-
+    margin: 10px;
 }
 
-a{
+.update {
     font-size: large;
+    border: 2px solid black;
+    padding: 8px;
+}
+
+.update a {
+    text-decoration: none;
+    color: #000;
+}
+
+.update a:hover {
+    color: red;
 }

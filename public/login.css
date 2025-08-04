@@ -38,7 +38,24 @@ img {
 }
 
 
+.nav{
+    background-color: white;
+    padding: 8px;
+    font-weight: bold;
+    overflow: hidden;
+    border: 3px solid black;
+}
 
+.nav a {
+    text-decoration: none;
+    padding: 10px;
+    font-size: 17px;
+    color: black;
+}
+
+.nav a:hover {
+    color: red;
+}
 
 
 

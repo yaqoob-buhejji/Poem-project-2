@@ -51,7 +51,7 @@ It is a website that the user can create his own poem by writing the author name
 <!-- GETTING STARTED -->
 ## How to use the website
 
-He will log in with an email and his own password, then he will write the poem, then he can access all the poems that users wrote, by then he can edit his poem by clicking update, then it will update what he have wrote. Then he can delete if he didn't like.
+He will log in with an email and his own password, then he will write the poem, then he can access all the poems that the user wrote, by then he can edit his poem by clicking update, then it will update what he have wrote. Then he can delete if he didn't like.
 
 ### Apps Used
 - Visual Studio Code
